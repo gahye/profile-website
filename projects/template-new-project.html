@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[프로젝트명] | ERP MM 컨설턴트 프로필</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">[이름] <small>ERP Consultant · SAP MM Specialist</small></a>
+    <div class="navlinks">
+      <a href="../index.html">Home</a>
+      <a href="../career.html">Career</a>
+      <a href="../projects.html" class="active">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../projects.html">Projects</a> / [프로젝트명]</div>
+    <h1>[프로젝트명]</h1>
+    <p class="client">[담당 역할]</p>
+    <div class="info-grid">
+      <div class="item"><div class="label">고객사</div><div class="value">[고객사명]</div></div>
+      <div class="item"><div class="label">기간</div><div class="value">[YYYY.MM ~ YYYY.MM]</div></div>
+      <div class="item"><div class="label">프로젝트 유형</div><div class="value">[ERP 구축 / PI 컨설팅 등]</div></div>
+      <div class="item"><div class="label">담당 모듈</div><div class="value">[모듈명]</div></div>
+      <div class="item"><div class="label">역할</div><div class="value">[역할]</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="card">
+            <h3><span class="dot"></span>프로젝트 개요</h3>
+            <p>[프로젝트 개요를 작성해 주세요.]</p>
+          </div>
+
+          <div class="card industry">
+            <h3><span class="dot"></span>고객사 사업 특성</h3>
+            <p>[고객사의 산업/사업 특성과, 그것이 구매/자재 프로세스에 어떤 영향을 주는지 작성해 주세요.]</p>
+          </div>
+
+          <div class="card">
+            <h3><span class="dot"></span>주요 수행 업무</h3>
+            <ul>
+              <li>[수행 업무 1]</li>
+              <li>[수행 업무 2]</li>
+              <li>[수행 업무 3]</li>
+            </ul>
+          </div>
+
+          <div class="card editable">
+            <h3><span class="dot"></span>핵심 성과 <span class="editable-flag">작성 필요</span></h3>
+            <p style="color:var(--muted);">[정량적 성과나 주요 임팩트를 작성해 주세요.]</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3><span class="dot"></span>사용 기술 / 모듈</h3>
+            <div class="stack-tags">
+              <span class="badge">[기술/모듈 1]</span>
+              <span class="badge">[기술/모듈 2]</span>
+            </div>
+          </div>
+          <div class="card editable">
+            <h3><span class="dot"></span>추가 정보 <span class="editable-flag">작성 필요</span></h3>
+            <p style="color:var(--muted);">[팀 규모, 협업 도구 등 자유롭게 작성해 주세요.]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> [이름]. Personal career profile.</span>
+    <a href="../projects.html">← 전체 프로젝트 목록</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
