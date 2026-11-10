@@ -7,9 +7,10 @@ ERP MM(구매/자재) 컨설턴트 커리어/프로젝트 포트폴리오 사이
 - `index.html` — 홈
 - `career.html` — Concept 1: 커리어 타임라인 (학력 + 경력)
 - `projects.html` — Concept 2: ERP 컨설팅 프로젝트 목록
-- `projects/aj-networks.html` — AJ네트웍스 ERP 시스템 구축 (2023.03 ~ 2024.07)
-- `projects/harim-group.html` — 하림그룹 ERP 구축 (2024.08 ~ 2026.01)
-- `projects/harim-pi.html` — 하림산업/펫푸드 PI 컨설팅 (2026.05 ~ 2026.07)
+- `projects/aj-networks.html` — AJ네트웍스 ERP 시스템 구축 (2023.03 ~ 2024.07, 1년 5개월)
+- `projects/harim-group.html` — 하림그룹 One ERP 구축 (2024.08 ~ 2026.01, 1년 6개월)
+- `projects/harim-pi.html` — 하림산업/펫푸드 PI 컨설팅 (2026.05 ~ 2026.07, 3개월)
+- `projects/harim-food-phase2.html` — 하림그룹 2차 ERP 구축 (하림식품, 2026.10 ~ 2027.05, 8개월)
 - `projects/template-new-project.html` — 새 프로젝트 추가 시 사용하는 템플릿
 - `assets/css/style.css` — 전체 공통 스타일
 

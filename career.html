@@ -11,7 +11,7 @@
 
 <nav class="topnav">
   <div class="wrap">
-    <a class="brand" href="index.html">[이름] <small>ERP Consultant · SAP MM Specialist</small></a>
+    <a class="brand" href="index.html">Gahye Jo <small>ERP Consultant · SAP MM Specialist</small></a>
     <div class="navlinks">
       <a href="index.html">Home</a>
       <a href="career.html" class="active">Career</a>
@@ -34,7 +34,7 @@
       <div class="timeline">
 
         <div class="tl-item current">
-          <div class="tl-period">2023.03 ~ 현재</div>
+          <div class="tl-period">2023.03 ~ 현재 (<span id="current-months" data-start="2023-03">3년 9개월</span>)</div>
           <div class="tl-card">
             <h3>삼성SDS · ERP사업팀</h3>
             <p class="org">ERP 컨설턴트</p>
@@ -48,29 +48,64 @@
               <span class="badge">SAP MM</span>
               <span class="badge">구매/자재 프로세스</span>
             </div>
+
+            <ul class="proj-tree">
+              <li>
+                <a href="projects/harim-food-phase2.html">하림그룹 2차 ERP 구축 (하림식품)</a>
+                <span class="meta">2026.10 ~ 2027.05 (8개월) · MM 모듈 리더</span>
+              </li>
+              <li>
+                <a href="projects/harim-pi.html">하림산업/펫푸드 PI 컨설팅</a>
+                <span class="meta">2026.05 ~ 2026.07 (3개월) · MM 모듈 리더</span>
+              </li>
+              <li>
+                <a href="projects/harim-group.html">하림그룹 One ERP 구축</a>
+                <span class="meta">2024.08 ~ 2026.01 (1년 6개월) · MM 모듈 컨설턴트(정산)</span>
+              </li>
+              <li>
+                <a href="projects/aj-networks.html">AJ네트웍스 ERP 시스템 구축</a>
+                <span class="meta">2023.03 ~ 2024.07 (1년 5개월) · MM 모듈 컨설턴트(구매/자재)</span>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="tl-item">
-          <div class="tl-period">2016.01 ~ 2023.02</div>
+          <div class="tl-period">2016.01 ~ 2023.02 (7년 2개월)</div>
           <div class="tl-card">
             <h3>HD현대일렉트릭 · 디지털혁신팀</h3>
-            <p class="org">ERP 운영 및 시스템 개발</p>
+            <p class="org">SAP ERP 구축·운영 및 시스템 개발</p>
             <p class="desc">
-              디지털혁신팀에서 사내 ERP 시스템의 운영을 담당하며 구매/자재 등 핵심 모듈의 개발 및 개선 업무를 수행.
-              현업 부서의 요구사항을 시스템에 반영하고 안정적인 ERP 운영을 지원한 경험을 바탕으로,
+              디지털혁신팀에서 SAP ERP 구축 및 운영에 참여하며 구매/자재(MM) 영역의 시스템 개발과 개선 업무를 수행.
+              현업 요구사항을 시스템에 반영하고 안정적인 ERP 운영을 지원한 경험을 바탕으로,
               이후 ERP 컨설턴트로 커리어를 전환하는 기반이 되었습니다.
             </p>
             <div class="badges">
-              <span class="badge">ERP 운영</span>
-              <span class="badge">시스템 개발</span>
-              <span class="badge">사내 SI</span>
+              <span class="badge">SAP MM</span>
+              <span class="badge">SAP PO 인터페이스</span>
+              <span class="badge">In-house 개발</span>
             </div>
+
+            <ul class="proj-tree">
+              <li>
+                <span class="title">SAP ERP 구축 및 운영</span>
+                <span class="meta">MM(구매/자재) 모듈</span>
+                <span class="meta">구매 SRM 연계 · 자재마스터 · 재고관리 등</span>
+              </li>
+              <li>
+                <span class="title">인터페이스 운영 및 개발</span>
+                <span class="meta">SAP PO 기반 연계(ERP–Legacy)</span>
+              </li>
+              <li>
+                <span class="title">시스템 운영 및 개발(In-house)</span>
+                <span class="meta">구매/자재 영역, C# · .NET · Oracle</span>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="tl-item">
-          <div class="tl-period">2010.03 ~ 2015.08</div>
+          <div class="tl-period">2010.03 ~ 2015.08 (5년 6개월)</div>
           <div class="tl-card">
             <h3>한동대학교</h3>
             <p class="org">컴퓨터공학과 · 학사 졸업</p>
@@ -90,11 +125,21 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year"></span> [이름]. Personal career profile.</span>
-    <span>Last updated: 2026.07</span>
+    <span>© <span id="year"></span> Gahye Jo. Personal career profile.</span>
+    <span>Last updated: 2026.11</span>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // '현재' 경력 기간을 오늘 날짜 기준으로 계산 (시작 월 포함, 1년 이상은 N년 M개월)
+  (function () {
+    var el = document.getElementById('current-months');
+    var p = el.dataset.start.split('-'), now = new Date();
+    var total = (now.getFullYear() - Number(p[0])) * 12 + (now.getMonth() + 1 - Number(p[1])) + 1;
+    var y = Math.floor(total / 12), m = total % 12;
+    el.textContent = y === 0 ? m + '개월' : (m === 0 ? y + '년' : y + '년 ' + m + '개월');
+  })();
+</script>
 </body>
 </html>

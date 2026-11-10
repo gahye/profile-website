@@ -120,6 +120,21 @@ section.block.tight{padding:36px 0;}
 .tl-card .org{font-size:14px;color:var(--muted);margin:0 0 10px;font-weight:500;}
 .tl-card .desc{font-size:14px;color:#333c50;margin:0;}
 .tl-card .badges{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;}
+
+/* 경력 카드 하위 프로젝트 트리 */
+.proj-tree{list-style:none;margin:16px 0 0;padding:14px 0 0 4px;border-top:1px dashed var(--line);}
+.proj-tree li{position:relative;padding:0 0 12px 22px;}
+.proj-tree li::before{ /* 세로 줄 */
+  content:"";position:absolute;left:4px;top:0;bottom:0;border-left:1.5px solid #c9ced9;
+}
+.proj-tree li:last-child::before{bottom:auto;height:11px;}
+.proj-tree li::after{ /* 가로 가지 */
+  content:"";position:absolute;left:4px;top:11px;width:12px;border-top:1.5px solid #c9ced9;
+}
+.proj-tree li:last-child{padding-bottom:0;}
+.proj-tree a,.proj-tree .title{font-size:14.5px;font-weight:700;color:var(--ink, #1a2233);text-decoration:none;}
+.proj-tree a:hover{color:var(--accent-2);text-decoration:underline;}
+.proj-tree .meta{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;}
 .badge{
   font-size:11.5px;font-weight:600;background:var(--tag-bg);color:var(--tag-ink);
   padding:4px 10px;border-radius:999px;
